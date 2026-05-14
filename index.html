@@ -24,23 +24,31 @@
       padding: 48px 40px;
       border: 1px solid #2a2a2a;
     }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
     .app-icon {
       width: 80px;
       height: 80px;
       border-radius: 18px;
-      margin-bottom: 20px;
-      display: block;
+      flex-shrink: 0;
+    }
+    .header-text {
+      display: flex;
+      flex-direction: column;
     }
     .logo {
       font-size: 36px;
       font-weight: 800;
       letter-spacing: -1px;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     .tagline {
       font-size: 14px;
       color: #888;
-      margin-bottom: 40px;
     }
     h2 {
       font-size: 18px;
@@ -89,8 +97,13 @@
 </head>
 <body>
   <div class="card">
-    <img src="icon.png" alt="ReactMe" class="app-icon" />
-    <div class="logo">ReactMe</div>
+    <div class="header">
+      <img src="icon.png" alt="ReactMe" class="app-icon" />
+      <div class="header-text">
+        <div class="logo">ReactMe</div>
+        <div class="tagline">Dual-camera recording</div>
+      </div>
+    </div>
 
     <h2>Support</h2>
     <p>Having trouble with ReactMe? Check the FAQ below or reach out directly — we respond within 24 hours.</p>
